@@ -24,15 +24,19 @@ export default class Insight extends Component {
           <h4 className="font-sans font-light text-lg md:text-2xl lg:text-3xl mt-4 md:mt-15 px-6 leading-relaxed text-left">
             Unlike hackathons that focus purely on coding, this initiative places strong emphasis on a user-centred design process, recognising the importance of a robust UX foundation for successful digital products.
           </h4>
-          <div className="px-6 mt-4 md:mt-8 space-y-3 md:space-y-4">
-            <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Event Name:</strong> Design2Code</p>
-            <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Organised By:</strong> UX Club, VIT Bhopal University</p>
-            <div className="mt-3 md:mt-4">
-              <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Proposed Dates & Format:</strong></p>
-              <ul className="list-disc pl-6 font-sans font-light text-base md:text-lg mt-2 space-y-1 md:space-y-2">
-                <li className="text-left">Day 1 (Online - Wireframe Submission): 23/11/2025</li>
-                <li className="text-left">Day 2 (Offline – Evaluation + Prize Distribution): 27/11/2025</li>
-              </ul>
+          <div className="px-6 mt-4 md:mt-8">
+            <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
+              <div className="space-y-3 md:space-y-4">
+                <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Event Name:</strong> Design2Code</p>
+                <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Organised By:</strong> UX Club, VIT Bhopal University</p>
+                <div className="mt-3 md:mt-4">
+                  <p className="font-sans font-medium text-base md:text-lg text-left"><strong>Proposed Dates & Format:</strong></p>
+                  <ul className="list-disc pl-6 font-sans font-light text-base md:text-lg mt-2 space-y-1 md:space-y-2">
+                    <li className="text-left">Day 1 (Online - Wireframe Submission): 23/11/2025</li>
+                    <li className="text-left">Day 2 (Offline – Evaluation + Prize Distribution): 27/11/2025</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <button className="flex items-center h-12 md:h-14 ml-6 mt-8 md:mt-12 bg-black text-white rounded-xl justify-between border-2 border-black hover:bg-white hover:text-black transition-all duration-300">
