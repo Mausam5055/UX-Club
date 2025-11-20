@@ -16,14 +16,17 @@ export default class Benefit extends Component {
         </h1>
         
         {/* Event Vision Section */}
-        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <h2 className="font-serif font-light text-2xl md:text-4xl px-6 pt-8 leading-tight">
-              Event Vision
-            </h2>
-            <h4 className="font-sans font-light text-lg md:text-xl px-6 py-6 leading-relaxed">
-              The core philosophy driving this hackathon is straightforward yet impactful: great products originate from great design. The first day centres on a flexible online round, focused on problem-solving and wireframing. The top 30 teams, distinguished by their user-centric design approach, will advance to the second day, where they will realise their validated concepts through an intensive coding session. This structure mirrors industry practices and instils the valuable lesson of prioritising design before development.
-            </h4>
+        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
+            <div className="space-y-6">
+              <h2 className="font-serif font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900">
+                Event Vision
+              </h2>
+              <div className="w-16 h-1 bg-[#bbecff]"></div>
+              <p className="font-sans text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+                The core philosophy driving this hackathon is straightforward yet impactful: <span className="font-semibold text-gray-900">great products originate from great design</span>. The first day centres on a flexible online round, focused on problem-solving and wireframing. The top 30 teams, distinguished by their user-centric design approach, will advance to the second day, where they will realise their validated concepts through an intensive coding session. This structure mirrors industry practices and instils the valuable lesson of prioritising design before development.
+              </p>
+            </div>
           </div>
           <div className="p-3 md:p-4 relative w-[90%] h-[60vh] my-auto py-10 mx-auto grid-pattern">
             <div className="absolute w-[40%] h-[80%] bottom-[10%] right-[2%] z-10 ">
@@ -63,26 +66,49 @@ export default class Benefit extends Component {
         </div>
         
         {/* Event Format Section - Day 1 */}
-        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center lg:order-2">
-            <h2 className="font-serif font-light text-2xl md:text-4xl px-6 pt-8 leading-tight">
-              Event Format - Day 1
-            </h2>
-            <div className="font-sans font-light text-lg md:text-xl px-6 py-6 space-y-4">
-              <h3 className="font-serif font-medium text-xl md:text-2xl">Online Design Sprint (Design + Coding) – <span className="font-bold">Free</span></h3>
-              <ul className="space-y-2 list-disc pl-5">
-                <li><span className="font-medium">Mode:</span> Online</li>
-                <li><span className="font-medium">Start Time:</span> Problem statement will be disseminated via email at 9:00 AM on 22/11/2025</li>
-                <li><span className="font-medium">Activity:</span> Teams will work remotely throughout the day to brainstorm, develop user flows, and create wireframes</li>
-                <li><span className="font-medium">Submission Deadline:</span> Teams must submit wireframes (PDF/JPG/Figma link) and a brief description through a designated Google Form by 11:59 PM – 23/11/2025</li>
-                <li>
-                  <span className="font-medium">Judging & Shortlisting:</span>
-                  <ul className="space-y-1 list-circle pl-5 mt-1">
-                    <li>A panel of senior club members will evaluate the submissions based on User-Centricity, Innovation, and Usability</li>
-                    <li>The top 30 teams will be announced by 11:00 PM – 24/11/2025 via email</li>
-                  </ul>
-                </li>
-              </ul>
+        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-col justify-center lg:order-2 px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
+            <div className="space-y-6">
+              <div>
+                <h2 className="font-serif font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900">
+                  Event Format
+                </h2>
+                <p className="font-sans text-xl md:text-2xl text-[#bbecff] font-semibold mt-2">Day 1</p>
+              </div>
+              <div className="w-16 h-1 bg-[#bbecff]"></div>
+              
+              <div className="space-y-4">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800">
+                  Online Design Sprint <span className="text-sm md:text-base text-gray-500">(Design + Coding)</span> 
+                  <span className="ml-2 inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">Free</span>
+                </h3>
+                
+                <div className="space-y-3 font-sans text-base md:text-lg text-gray-700">
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                    <span className="font-semibold text-gray-900 min-w-[140px]">Mode:</span>
+                    <span>Online</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                    <span className="font-semibold text-gray-900 min-w-[140px]">Start Time:</span>
+                    <span>Problem statement disseminated via email at 9:00 AM on 22/11/2025</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                    <span className="font-semibold text-gray-900 min-w-[140px]">Activity:</span>
+                    <span>Teams work remotely to brainstorm, develop user flows, and create wireframes</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                    <span className="font-semibold text-gray-900 min-w-[140px]">Deadline:</span>
+                    <span>Submit wireframes (PDF/JPG/Figma link) via Google Form by 11:59 PM – 23/11/2025</span>
+                  </div>
+                  <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#bbecff]">
+                    <p className="font-semibold text-gray-900 mb-2">Judging & Shortlisting:</p>
+                    <ul className="space-y-2 list-disc pl-5 text-gray-700">
+                      <li>Panel evaluates based on User-Centricity, Innovation, and Usability</li>
+                      <li>Top 30 teams announced by 11:00 PM – 24/11/2025 via email</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="pt-7 lg:order-1 relative h-[60vh] sm:h-[80vh] md:h-[80vh] w-[90%] my-auto mx-auto grid-pattern flex items-center justify-center">
@@ -97,38 +123,45 @@ export default class Benefit extends Component {
         </div>
         
         {/* Event Format Section - Day 2 */}
-        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center">
-            <h2 className="font-serif font-light text-2xl md:text-4xl px-6 pt-8 leading-tight">
-              Event Format - Day 2
-            </h2>
-            <div className="font-sans font-light text-lg md:text-xl px-6 py-6 space-y-4">
-              <h3 className="font-serif font-medium text-xl md:text-2xl">Offline Live Code Evaluation (Evaluation) – <span className="font-bold">Paid</span></h3>
-              <div className="space-y-3">
-                <div>
-                  <span className="font-medium">1:00 PM - 1:30 PM:</span> Mandatory check-in for all shortlisted teams
-                </div>
-                <div>
-                  <span className="font-medium">1:30 PM – 2:00 PM:</span> Inaugural Ceremony
-                  <ul className="space-y-1 list-circle pl-5 mt-1">
-                    <li>Welcome address by the General Secretary</li>
-                    <li>Briefing by the UX Club General Secretary on event flow and rules</li>
-                  </ul>
-                </div>
-                <div>
-                  <span className="font-medium">2:00 PM - 3:20 PM:</span> Evaluation
-                  <ul className="space-y-1 list-circle pl-5 mt-1">
-                    <li>Teams will be evaluated as per their developed model</li>
-                    <li>Senior Club Members offer guidance throughout</li>
-                  </ul>
-                </div>
-                <div>
-                  <span className="font-medium">3:20 PM - 4:20 PM:</span> Final demo and judging by a panel + Prize Distribution, felicitation of guests, and vote of thanks
-                  <ul className="space-y-1 list-circle pl-5 mt-1">
-                    <li>Felicitation of judges, and faculty</li>
-                    <li>Announcement of the winning team and distribution of Certificates, Gift Cards (Cash Price)</li>
-                    <li>Vote of Thanks by the UX Club</li>
-                  </ul>
+        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
+            <div className="space-y-6">
+              <div>
+                <h2 className="font-serif font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900">
+                  Event Format
+                </h2>
+                <p className="font-sans text-xl md:text-2xl text-[#bbecff] font-semibold mt-2">Day 2</p>
+              </div>
+              <div className="w-16 h-1 bg-[#bbecff]"></div>
+              
+              <div className="space-y-5">
+                <h3 className="font-serif text-2xl md:text-3xl text-gray-800">
+                  Offline Live Code Evaluation 
+                  <span className="ml-2 inline-block bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Paid</span>
+                </h3>
+                
+                <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
+                  <div className="font-sans text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
+                    <div className="pb-3 border-b border-gray-200">
+                      <p className="font-semibold text-gray-900 mb-1">1:00 PM - 1:30 PM</p>
+                      <p>Mandatory check-in for all shortlisted teams.</p>
+                    </div>
+                    
+                    <div className="pb-3 border-b border-gray-200">
+                      <p className="font-semibold text-gray-900 mb-1">1:30 PM - 2:00 PM</p>
+                      <p>Inaugural Ceremony with welcome address and briefing on event flow and rules.</p>
+                    </div>
+                    
+                    <div className="pb-3 border-b border-gray-200">
+                      <p className="font-semibold text-gray-900 mb-1">2:00 PM - 3:20 PM</p>
+                      <p>Teams evaluated based on their developed models with guidance from Senior Club Members.</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-1">3:20 PM - 4:20 PM</p>
+                      <p>Final demo, judging, prize distribution, and vote of thanks.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -170,23 +203,42 @@ export default class Benefit extends Component {
         </div>
         
         {/* Prize Structure Section */}
-        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2">
-          <div className="flex flex-col justify-center lg:order-2">
-            <h2 className="font-serif font-light text-2xl md:text-4xl px-6 pt-8 leading-tight">
-              Prize Structure
-            </h2>
-            <div className="font-sans font-light text-lg md:text-xl px-6 py-6 space-y-4">
-              <ul className="space-y-3 list-disc pl-5">
-                <li className="font-medium">One winning team will be declared</li>
-                <li>
-                  <span className="font-medium">Prize Money (Cash Gift Card):</span>
-                  <ul className="space-y-1 list-circle pl-5 mt-1">
-                    <li>Winning Team: ₹4000</li>
-                  </ul>
-                </li>
-                <li>All members of the winning team will receive an official offline certificates</li>
-                <li>All other participants will be awarded digital participation certificates</li>
-              </ul>
+        <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 shadow-sm hover:shadow-md transition-shadow">
+          <div className="flex flex-col justify-center lg:order-2 px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
+            <div className="space-y-6">
+              <h2 className="font-serif font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900">
+                Prize Structure
+              </h2>
+              <div className="w-16 h-1 bg-[#bbecff]"></div>
+              
+              <div className="space-y-4">
+                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-2 border-yellow-300 shadow-sm">
+                  <div className="flex items-center gap-3 mb-3">
+                    <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    <h3 className="font-serif text-2xl md:text-3xl text-gray-900 font-semibold">Winning Team</h3>
+                  </div>
+                  <p className="text-3xl md:text-4xl font-bold text-gray-900">₹4,000</p>
+                  <p className="text-gray-700 mt-2 font-sans">Cash Gift Card</p>
+                </div>
+                
+                <div className="space-y-3 font-sans text-base md:text-lg">
+                  <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                    <svg className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <p className="text-gray-700"><span className="font-semibold">Official Offline Certificates</span> for all winning team members</p>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                    <svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <p className="text-gray-700"><span className="font-semibold">Digital Participation Certificates</span> for all other participants</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="pt-7 lg:order-1 relative h-[60vh] sm:h-[80vh] md:h-[80vh] w-[90%] my-auto mx-auto grid-pattern flex items-center justify-center">
