@@ -185,7 +185,7 @@ export default class Included extends Component {
           <div className="relative h-40 mt-8 xl:hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <CircularText
-                text="Meet Our Expert Evaluators "
+                text="DESIGN*CODE*PUBLISH*"
                 onHover="speedUp"
                 spinDuration={20}
                 className="custom-class w-32 h-32"
@@ -238,10 +238,8 @@ export default class Included extends Component {
                   </div>
                 </div>
               ))}
-            </div>
-            {/* Circular Text at Bottom Right */}
-            <div className="relative h-40 mt-8">
-              <div className="absolute inset-0 flex items-center justify-center">
+              {/* Circular Text below 5th image */}
+              <div className="col-span-2 flex justify-center mt-8">
                 <CircularText
                   text="DESIGN*CODE*PUBLISH*"
                   onHover="speedUp"
