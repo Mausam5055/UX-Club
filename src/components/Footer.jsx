@@ -14,9 +14,6 @@ export default class Footer extends Component {
             <div className="flex flex-col items-center justify-center">
               {/* Links - Centered */}
               <div className="flex flex-col gap-3 text-base md:text-lg text-white text-center">
-                <a href="#register" className="hover:text-red-500 transition-colors cursor-pointer">Register Now</a>
-                <a href="#details" className="hover:text-red-500 transition-colors cursor-pointer">Hackathon Details</a>
-                <a href="#contact" className="hover:text-red-500 transition-colors cursor-pointer">Contact UX Club</a>
               </div>
               
               {/* Social Icons */}
@@ -84,10 +81,10 @@ export default class Footer extends Component {
           {/* Divider */}
           <div className="w-full h-[1px] bg-gray-700 my-6 md:my-8" />
 
-          {/* Bottom Section with Logo */}
-          <div className="grid grid-cols-1 gap-6 items-center">
-            {/* SVG Logo - Slightly Rightwards */}
-            <div className="flex justify-center pl-4">
+          {/* Bottom Section with Logo and Copyright */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            {/* Design2Code Text - Left */}
+            <div className="text-white text-left">
               <svg viewBox="0 0 600 120" className="w-full max-w-md h-auto">
                 <g filter="url(#glitch)" transform="translate(60, 0)">
                   <text x="0" y="55%" fontSize="64" textAnchor="start" fill="#ffffff">Design<tspan fill="red">2</tspan>Code</text>
@@ -95,9 +92,9 @@ export default class Footer extends Component {
               </svg>
             </div>
 
-            {/* Copyright Info */}
-            <div className="flex flex-col gap-2 text-sm text-center">
-              <div className="text-white text-center">
+            {/* Copyright Info - Right */}
+            <div className="flex flex-col gap-2 text-sm text-right">
+              <div className="text-white text-right">
                 Organized by UX Club
               </div>
             </div>
