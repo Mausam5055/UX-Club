@@ -23,9 +23,11 @@ export default class Benefit extends Component {
                 Event Vision
               </h2>
               <div className="w-16 h-1 bg-[#bbecff]"></div>
-              <p className="font-sans text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
-                The core philosophy driving this hackathon is straightforward yet impactful: <span className="font-semibold text-gray-900">great products originate from great design</span>. The first day centres on a flexible online round, focused on problem-solving and wireframing. The top 30 teams, distinguished by their user-centric design approach, will advance to the second day, where they will realise their validated concepts through an intensive coding session. This structure mirrors industry practices and instils the valuable lesson of prioritising design before development.
-              </p>
+              <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
+                <p className="font-sans text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+                  The core philosophy driving this hackathon is straightforward yet impactful: <span className="font-semibold text-gray-900">great products originate from great design</span>. The first day centres on a flexible online round, focused on problem-solving and wireframing. The top 30 teams, distinguished by their user-centric design approach, will advance to the second day, where they will realise their validated concepts through an intensive coding session. This structure mirrors industry practices and instils the valuable lesson of prioritising design before development.
+                </p>
+              </div>
             </div>
           </div>
           <div className="p-3 md:p-4 relative w-[90%] h-[60vh] my-auto py-10 mx-auto grid-pattern">
@@ -83,30 +85,32 @@ export default class Benefit extends Component {
                   <span className="ml-2 inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">Free</span>
                 </h3>
                 
-                <div className="space-y-3 font-sans text-base md:text-lg text-gray-700">
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                    <span className="font-semibold text-gray-900 min-w-[140px]">Mode:</span>
-                    <span>Online</span>
+                <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
+                  <div className="font-sans text-base md:text-lg text-gray-700 space-y-2">
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                      <span className="font-semibold text-gray-900 min-w-[140px]">Mode:</span>
+                      <span>Online</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                      <span className="font-semibold text-gray-900 min-w-[140px]">Start Time:</span>
+                      <span>Problem statement disseminated via email at 9:00 AM on 22/11/2025</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                      <span className="font-semibold text-gray-900 min-w-[140px]">Activity:</span>
+                      <span>Teams work remotely to brainstorm, develop user flows, and create wireframes</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                      <span className="font-semibold text-gray-900 min-w-[140px]">Deadline:</span>
+                      <span>Submit wireframes (PDF/JPG/Figma link) via Google Form by 11:59 PM – 23/11/2025</span>
+                    </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                    <span className="font-semibold text-gray-900 min-w-[140px]">Start Time:</span>
-                    <span>Problem statement disseminated via email at 9:00 AM on 22/11/2025</span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                    <span className="font-semibold text-gray-900 min-w-[140px]">Activity:</span>
-                    <span>Teams work remotely to brainstorm, develop user flows, and create wireframes</span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                    <span className="font-semibold text-gray-900 min-w-[140px]">Deadline:</span>
-                    <span>Submit wireframes (PDF/JPG/Figma link) via Google Form by 11:59 PM – 23/11/2025</span>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#bbecff]">
-                    <p className="font-semibold text-gray-900 mb-2">Judging & Shortlisting:</p>
-                    <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                      <li>Panel evaluates based on User-Centricity, Innovation, and Usability</li>
-                      <li>Top 30 teams announced by 11:00 PM – 24/11/2025 via email</li>
-                    </ul>
-                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#bbecff]">
+                  <p className="font-semibold text-gray-900 mb-2">Judging & Shortlisting:</p>
+                  <ul className="space-y-2 list-disc pl-5 text-gray-700">
+                    <li>Panel evaluates based on User-Centricity, Innovation, and Usability</li>
+                    <li>Top 30 teams announced by 11:00 PM – 24/11/2025 via email</li>
+                  </ul>
                 </div>
               </div>
             </div>
