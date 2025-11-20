@@ -52,22 +52,84 @@ export default class Benefit extends Component {
                 </div>
 
                 <div className="space-y-3 font-sans text-base md:text-lg">
-                  <div className="flex items-center bg-white rounded-2xl gap-2 w-fit px-2 my-2">
-                    <p className="text-gray-700 py-2">
+                  <div className="flex items-start gap-3">
+                    <div className="h-4 w-4 md:h-5 md:w-5 mt-1 flex-shrink-0">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          {" "}
+                          <path
+                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#292D32"
+                            strokeWidth="0.792"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>{" "}
+                          <path
+                            d="M7.75 12L10.58 14.83L16.25 9.17004"
+                            stroke="#292D32"
+                            strokeWidth="0.792"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>{" "}
+                        </g>
+                      </svg>
+                    </div>
+                    <span className="text-sm md:text-lg font-mono font-light">
                       <span className="font-semibold">
                         Official Offline Certificates
                       </span>{" "}
                       for all winning team members
-                    </p>
+                    </span>
                   </div>
 
-                  <div className="flex items-center bg-white rounded-2xl gap-2 w-fit px-2 my-2">
-                    <p className="text-gray-700 py-2">
+                  <div className="flex items-start gap-3">
+                    <div className="h-4 w-4 md:h-5 md:w-5 mt-1 flex-shrink-0">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          {" "}
+                          <path
+                            d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                            stroke="#292D32"
+                            strokeWidth="0.792"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>{" "}
+                          <path
+                            d="M7.75 12L10.58 14.83L16.25 9.17004"
+                            stroke="#292D32"
+                            strokeWidth="0.792"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          ></path>{" "}
+                        </g>
+                      </svg>
+                    </div>
+                    <span className="text-sm md:text-lg font-mono font-light">
                       <span className="font-semibold">
                         Digital Participation Certificates
                       </span>{" "}
                       for all other participants
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>
