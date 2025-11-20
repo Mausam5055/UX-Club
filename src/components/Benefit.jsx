@@ -91,14 +91,34 @@ export default class Benefit extends Component {
               </div>
             </div>
           </div>
-          <div className="pt-7 lg:order-1 relative h-[60vh] sm:h-[80vh] md:h-[80vh] w-[90%] my-auto mx-auto grid-pattern flex items-center justify-center">
-            <div className="absolute w-[80%] h-[80%] rounded-full">
-              <img
-                className="w-full h-full rounded-full object-cover"
-                src="demo2.jpg"
-                alt="Prize Structure"
-              />
-            </div>
+          <div className="p-3 md:p-4 relative w-[90%] h-[60vh] my-auto mx-auto grid-pattern flex items-center justify-center">
+           
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <clipPath id="prizeMask">
+                  <path d="M18.502 100.912L18.4857 99.9286C8.28339 98.2515 0.5 89.3913 0.5 78.7143V22.7143C0.5 10.8401 10.1259 1.21428 22 1.21428H78C88.4321 1.21428 97.1299 8.64466 99.0877 18.502L100.071 18.4857C101.748 8.28339 110.609 0.5 121.286 0.5L177.286 0.500002C189.16 0.500003 198.786 10.1259 198.786 22V78C198.786 88.432 191.355 97.1298 181.499 99.0876L181.515 100.071C191.716 101.748 199.5 110.609 199.5 121.286V177.286C199.5 189.16 189.874 198.786 178 198.786H122C111.568 198.786 102.87 191.355 100.912 181.498L99.9286 181.514C98.2515 191.716 89.3914 199.5 78.7143 199.5H22.7143C10.8401 199.5 1.21426 189.874 1.21426 178L1.21426 122C1.21426 111.568 8.64466 102.87 18.502 100.912Z"></path>
+                </clipPath>
+              </defs>
+              <image
+                href="demo2.jpg"
+                loading="lazy"
+                width="200"
+                height="200"
+                clipPath="url(#prizeMask)"
+                preserveAspectRatio="xMidYMid slice"
+              ></image>
+              <path
+                d="M18.502 100.912L18.4857 99.9286C8.28339 98.2515 0.5 89.3913 0.5 78.7143V22.7143C0.5 10.8401 10.1259 1.21428 22 1.21428H78C88.4321 1.21428 97.1299 8.64466 99.0877 18.502L100.071 18.4857C101.748 8.28339 110.609 0.5 121.286 0.5L177.286 0.500002C189.16 0.500003 198.786 10.1259 198.786 22V78C198.786 88.432 191.355 97.1298 181.499 99.0876L181.515 100.071C191.716 101.748 199.5 110.609 199.5 121.286V177.286C199.5 189.16 189.874 198.786 178 198.786H122C111.568 198.786 102.87 191.355 100.912 181.498L99.9286 181.514C98.2515 191.716 89.3914 199.5 78.7143 199.5H22.7143C10.8401 199.5 1.21426 189.874 1.21426 178L1.21426 122C1.21426 111.568 8.64466 102.87 18.502 100.912Z"
+                fill="none"
+                stroke="black"
+                vectorEffect="non-scaling-stroke"
+              ></path>
+            </svg>
           </div>
         </div>
 
