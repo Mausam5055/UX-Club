@@ -29,7 +29,7 @@ export default function Nav({ isOpen, toggleMenu }) {
   };
 
   const bigTextAnimation = (delay) => ({
-    initial: { y: 50 },
+    initial: { y: 100 },
     animate: { y: 0, transition: { delay, ease: [0.77, 0, 0.175, 1], duration: 1.5 } },
   });
 
@@ -107,18 +107,19 @@ export default function Nav({ isOpen, toggleMenu }) {
                   ></motion.div>
                 </div>
                 <div className="w-full">
-                  <div className="flex pb-2 items-center text-4xl justify-between">
-                    <div className="overflow-hidden">
-                      <motion.div {...bigTextAnimation(1.3)}>
-                        <div
-                          className="text-4xl text-[#0e0e0e] cursor-pointer"
+                  <div className="flex pb-1 items-start text-4xl justify-between">
+                    <div className="flex-1 pr-4">
+                      <div className="overflow-hidden">
+                        <motion.div 
+                          {...bigTextAnimation(1.3)}
+                          className="text-4xl text-[#0e0e0e] cursor-pointer leading-tight break-words"
                           onClick={() => scrollToSection('ourgoals')}
                         >
                           Evaluation Committee
-                        </div>
-                      </motion.div>
+                        </motion.div>
+                      </div>
                     </div>
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden flex-shrink-0">
                       <motion.div
                         {...bigTextAnimation(1.4)}
                         className="text-4xl text-zinc-500"
@@ -134,7 +135,7 @@ export default function Nav({ isOpen, toggleMenu }) {
                 </div>
                 <div className="w-full">
                   <div className="flex pb-2 items-center text-4xl justify-between">
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden pb-1">
                       <motion.div {...bigTextAnimation(1.5)}>
                         <div
                           className="text-4xl text-[#0e0e0e] cursor-pointer"
@@ -148,7 +149,7 @@ export default function Nav({ isOpen, toggleMenu }) {
                         </div>
                       </motion.div>
                     </div>
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden pb-1">
                       <motion.div
                         {...bigTextAnimation(1.6)}
                         className="text-4xl text-zinc-500"
@@ -183,7 +184,7 @@ export default function Nav({ isOpen, toggleMenu }) {
                 <div className="overflow-hidden">
                   <motion.div
                     {...smallTextAnimation(1.8)}
-                    className="flex flex-col leading-none"
+                    className="flex flex-col leading-relaxed"
                   >
                     <h1>Collectible Furniture</h1>
                     <h1>and Objects</h1>
@@ -192,7 +193,7 @@ export default function Nav({ isOpen, toggleMenu }) {
                 <div className="overflow-hidden">
                   <motion.div
                     {...smallTextAnimation(1.8)}
-                    className="flex flex-col leading-none"
+                    className="flex flex-col leading-relaxed"
                   >
                     <h1>Designed by</h1>
                     <h1>UX Club, VIT Bhopal</h1>
