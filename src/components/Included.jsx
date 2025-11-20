@@ -70,16 +70,16 @@ export default class Included extends Component {
     const { currentIndex } = this.state;
     
     const teamMembers = [
-      { category: "Technical Equipment 1", name: "John Smith" },
-      { category: "Technical Equipment 2", name: "Jane Doe" },
-      { category: "Venue & Logistics 1", name: "Robert Johnson" },
-      { category: "Venue & Logistics 2", name: "Emily Wilson" },
-      { category: "Permissions Required 1", name: "Michael Brown" },
-      { category: "Permissions Required 2", name: "Sarah Davis" }
+      { category: "Technical Equipment 1", name: "Dr. T Venkateswara Rao", title: "Faculty Co-ordinator" },
+      { category: "Technical Equipment 2", name: "Yeshu Agarwal", title: "Tech Lead" },
+      { category: "Venue & Logistics 1", name: "Nitin Vishwakarma", title: "Design Lead" },
+      { category: "Venue & Logistics 2", name: "Sonakshi Saxena", title: "General Secretary" },
+      { category: "Permissions Required 1", name: "Sujal Singh", title: "Vice President" },
+      { category: "Permissions Required 2", name: "Yeshu Agarwal", title: "Tech Lead" }
     ];
     
     return (
-      <div className="w-full xl:h-[100vh] xl:overflow-y-scroll py-8 grid grid-cols-1 xl:grid-cols-2 bg-white scroll-container">
+      <div className="w-full py-8 grid grid-cols-1 xl:grid-cols-2 bg-white">
         <div className="flex flex-col justify-items-start">
           <div className="absolute h-6 bg-[#bbecff] w-[180px] items-center rounded-2xl flex gap-2 mx-6 py-2 px-4">
             <div className="h-4 w-4 ml-1">
@@ -153,75 +153,89 @@ export default class Included extends Component {
           
           {/* Desktop Grid Layout */}
           <div className="mt-0 hidden xl:block">
-            <div className="flex justify-center items-center gap-10">
+            <div className="grid grid-cols-2 gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Technical Equipment 1</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">John Smith</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Dr. T Venkateswara Rao</p>
+                  </div>
+                  <p className="text-sm text-gray-600">Faculty Co-ordinator</p>
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Technical Equipment 2</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">Jane Doe</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Yeshu Agarwal</p>
+                  </div>
+                  <p className="text-sm text-gray-600">Tech Lead</p>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center items-center gap-10">
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Venue & Logistics 1</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">Robert Johnson</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Nitin Vishwakarma</p>
+                  </div>
+                  <p className="text-sm text-gray-600">Design Lead</p>
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Venue & Logistics 2</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">Emily Wilson</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Sonakshi Saxena</p>
+                  </div>
+                  <p className="text-sm text-gray-600">General Secretary</p>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center items-center gap-10">
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Permissions Required 1</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">Michael Brown</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Sujal Singh</p>
+                  </div>
+                  <p className="text-sm text-gray-600">Vice President</p>
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-64 h-80 md:w-64 md:h-80 bg-gray-200 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">Permissions Required 2</span>
                 </div>
-                <div className="flex items-center mt-2">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                  </svg>
-                  <p className="text-lg font-serif">Sarah Davis</p>
+                <div className="flex items-center mt-2 flex-col">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                    </svg>
+                    <p className="text-lg font-serif">Yeshu Agarwal</p>
+                  </div>
+                  <p className="text-sm text-gray-600">Tech Lead</p>
                 </div>
               </div>
             </div>
