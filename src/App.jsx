@@ -78,7 +78,7 @@ function App() {
           {/* <Insight /> */}
           <Benefit />
           <Scroller />
-          <Included />
+          {/* <Included /> */}
           <Pack />
           <Footer />
         </div>
