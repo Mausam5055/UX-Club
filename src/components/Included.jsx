@@ -101,7 +101,7 @@ export default class Included extends Component {
               </svg>
             </div>
             <span className="font-sans text-sm font-light text-black uppercase">
-              Evaluation Committee
+              Evaluaters
             </span>
           </div>
           <h1 className="font-serif font-light text-3xl md:text-5xl px-6 py-10 leading-tight">
