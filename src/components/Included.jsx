@@ -182,13 +182,15 @@ export default class Included extends Component {
             </div>
           </div>
           {/* Circular Text for Mobile at Bottom */}
-          <div className="flex justify-center mt-8 xl:hidden">
-            <CircularText 
-              text="Meet Our Expert Evaluators "
-              spinDuration={15}
-              onHover="speedUp"
-              className=""
-            />
+          <div className="relative h-40 mt-8 xl:hidden">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <CircularText
+                text="Meet Our Expert Evaluators "
+                onHover="speedUp"
+                spinDuration={20}
+                className="custom-class w-32 h-32"
+              />
+            </div>
           </div>
           
           {/* Desktop Grid Layout */}
@@ -238,13 +240,15 @@ export default class Included extends Component {
               ))}
             </div>
             {/* Circular Text at Bottom Right */}
-            <div className="flex justify-end mt-8">
-              <CircularText 
-                text="Meet Our Expert Evaluators "
-                spinDuration={15}
-                onHover="speedUp"
-                className=""
-              />
+            <div className="relative h-40 mt-8">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <CircularText
+                  text="DESIGN*CODE*PUBLISH*"
+                  onHover="speedUp"
+                  spinDuration={20}
+                  className="custom-class w-32 h-32"
+                />
+              </div>
             </div>
           </div>
         </div>
