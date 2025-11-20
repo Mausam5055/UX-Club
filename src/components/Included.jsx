@@ -240,7 +240,7 @@ export default class Included extends Component {
             <h2 className="font-serif text-xl md:text-3xl md:mt-2 mt-12 py-2 mb-6">
               Technical Equipment
             </h2>
-            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12">
+            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12 text-center">
               Essential technical equipment needed for Day 2 of the event.
             </p>
             <div className="flex items-center bg-white rounded-2xl gap-2 w-fit  px-2 my-2 mb-4 md:mb-6">
@@ -363,7 +363,7 @@ export default class Included extends Component {
             <h2 className="font-serif text-xl mt-12 md:text-3xl md:mt-2 py-2 mb-6">
               Venue & Logistics
             </h2>
-            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12">
+            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12 text-center">
               Venue setup and logistical requirements for Day 2.
             </p>
             <div className="flex items-center bg-white rounded-2xl gap-2 w-fit  px-2 my-2 mb-4 md:mb-6">
@@ -560,7 +560,7 @@ export default class Included extends Component {
             <h2 className="font-serif text-xl md:text-3xl mt-12 md:mt-2 py-2 mb-6">
               Permissions Required
             </h2>
-            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12">
+            <p className="font-sans text-sm md:text-xl py-2 font-light mb-12 text-center">
               Official permissions needed to conduct Day 2 of the event.
             </p>
             <div className="flex items-center bg-white rounded-2xl gap-2 w-fit  px-2 my-2 mb-4 md:mb-6">

@@ -12,16 +12,16 @@ export default class Insight extends Component {
               alt=""
             />
           </div>
-          <h3 className="font-serif font-light text-xl md:text-3xl lg:text-4xl px-6 mt-6 md:mt-15 mb-2 md:mb-4 text-left">
+          <h3 className="font-serif font-light text-xl md:text-3xl lg:text-4xl px-6 mt-6 md:mt-15 mb-2 md:mb-4 text-center">
             Design2Code
           </h3>
-          <p className="font-sans font-light text-lg md:text-2xl lg:text-3xl px-6 leading-relaxed text-left">
+          <p className="font-sans font-light text-lg md:text-2xl lg:text-3xl px-6 leading-relaxed text-center">
             The UX Club of VIT Bhopal University is excited to propose the &quot;Design2Code&quot;. This event, spanning two days, is crafted to bridge the essential gap between design thinking and technical execution.
           </p>
           <div className="pb-8 md:pb-12"></div>
         </div>
         <div className="w-full py-6 pt-4 md:pt-20">
-          <h4 className="font-sans font-light text-lg md:text-2xl lg:text-3xl mt-4 md:mt-15 px-6 leading-relaxed text-left">
+          <h4 className="font-sans font-light text-lg md:text-2xl lg:text-3xl mt-4 md:mt-15 px-6 leading-relaxed text-center">
             Unlike hackathons that focus purely on coding, this initiative places strong emphasis on a user-centred design process, recognising the importance of a robust UX foundation for successful digital products.
           </h4>
           <div className="px-6 mt-4 md:mt-8">

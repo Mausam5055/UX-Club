@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 export default class Footer extends Component {
   render() {
@@ -7,13 +7,13 @@ export default class Footer extends Component {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight text-center">
               Join the Design2Code Hackathon
             </h1>
             
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 justify-between items-start sm:items-center">
               {/* Links */}
-              <div className="flex flex-col gap-3 text-base md:text-lg text-white">
+              <div className="flex flex-col gap-3 text-base md:text-lg text-white text-center">
                 <a href="#register" className="hover:text-red-500 transition-colors cursor-pointer">Register Now</a>
                 <a href="#details" className="hover:text-red-500 transition-colors cursor-pointer">Hackathon Details</a>
                 <a href="#contact" className="hover:text-red-500 transition-colors cursor-pointer">Contact UX Club</a>
@@ -100,7 +100,7 @@ export default class Footer extends Component {
             {/* Copyright Info */}
             <div className="flex flex-col md:flex-row md:justify-end gap-2 md:gap-8 text-sm md:text-base text-center md:text-right">
               
-              <div className="text-white">
+              <div className="text-white text-center">
                 Organized by UX Club
               </div>
             </div>

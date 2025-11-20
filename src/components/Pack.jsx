@@ -5,10 +5,10 @@ class Pack extends React.Component {
     return (
       <div className="w-full py-10 h-full items-center grid bg-[#dcfebc]">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <h2 className="font-serif font-light text-3xl md:text-5xl px-6 leading-10">
+          <h2 className="font-serif font-light text-3xl md:text-5xl px-6 leading-10 text-center">
             Hackathon Pricing Details
           </h2>
-          <h4 className="font-sans font-light text-xl md:text-2xl px-6 mt-10 md:mt-0">
+          <h4 className="font-sans font-light text-xl md:text-2xl px-6 mt-10 md:mt-0 text-center">
             Projected Income Breakdown for Design2Code Hackathon
           </h4>
         </div>
@@ -21,15 +21,15 @@ class Pack extends React.Component {
                   alt=""
                 />
               </div>
-              <h2 className="font-serif font-light text-3xl md:text-4xl">
+              <h2 className="font-serif font-light text-3xl md:text-4xl text-center">
                 Entry Fee Structure
               </h2>
             </div>
             <div className="px-6">
-              <h4 className="font-sans font-light text-2xl md:text-2xl py-8">
+              <h4 className="font-sans font-light text-2xl md:text-2xl py-8 text-center">
                 Team Size Options with Pricing
               </h4>
-              <p className="font-sans text-xl font-light">Flexible Participation</p>
+              <p className="font-sans text-xl font-light text-center">Flexible Participation</p>
               <div className="font-sans text-xl py-2">
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Solo: ₹79</li>
@@ -38,7 +38,7 @@ class Pack extends React.Component {
                   <li>Team of 4: ₹219</li>
                 </ul>
               </div>
-              <p className="font-sans text-xl font-light">
+              <p className="font-sans text-xl font-light text-center">
                 Target Audience: Open to all students
               </p>
               <button className="flex items-center w-[95%] h-12 mt-6 bg-black text-white rounded-xl justify-between border-2 border-black hover:bg-white hover:text-black">
@@ -105,7 +105,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl font-sans font-light">
+                <span className="text-lg md:text-xl font-sans font-light text-center">
                   Solo, Duo, 3 members, or 4 members teams
                 </span>
               </div>
@@ -141,7 +141,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl font-sans font-light">
+                <span className="text-lg md:text-xl font-sans font-light text-center">
                   Expected Participation: 120 Teams (Round 1), 60 Teams (Round 2)
                 </span>
               </div>
@@ -177,7 +177,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl font-sans font-light leading-tight">
+                <span className="text-lg md:text-xl font-sans font-light leading-tight text-center">
                   Streamlined and self-sustaining event
                 </span>
               </div>
@@ -191,15 +191,15 @@ class Pack extends React.Component {
                   alt=""
                 />
               </div>
-              <h2 className="font-serif font-light text-3xl md:text-4xl">
+              <h2 className="font-serif font-light text-3xl md:text-4xl text-center">
                 Projected Income
               </h2>
             </div>
             <div className="px-6">
-              <h4 className="font-sans font-light text-2xl md:text-2xl py-8">
+              <h4 className="font-sans font-light text-2xl md:text-2xl py-8 text-center">
                 Breakdown by Team Type
               </h4>
-              <p className="font-sans text-xl font-light">Revenue Forecast</p>
+              <p className="font-sans text-xl font-light text-center">Revenue Forecast</p>
               <div className="font-sans text-xl py-2">
                 <table className="w-full text-left border-collapse">
                   <thead>
@@ -244,7 +244,7 @@ class Pack extends React.Component {
                   </tbody>
                 </table>
               </div>
-              <p className="font-sans text-xl font-light">
+              <p className="font-sans text-xl font-light text-center">
                 Delivered with confidence
               </p>
               <button className="flex items-center w-[95%] h-12 mt-6 bg-black text-white rounded-xl justify-between border-2 border-black hover:bg-white hover:text-black">
@@ -304,15 +304,15 @@ class Pack extends React.Component {
                   alt=""
                 />
               </div>
-              <h2 className="font-serif font-light text-3xl md:text-4xl">
+              <h2 className="font-serif font-light text-3xl md:text-4xl text-center">
                 Event Benefits
               </h2>
             </div>
             <div className="px-6">
-              <h4 className="font-sans font-light text-2xl md:text-2xl py-8">
+              <h4 className="font-sans font-light text-2xl md:text-2xl py-8 text-center">
                 Why This Hackathon Will Succeed
               </h4>
-              <p className="font-sans text-xl font-light">Key Advantages</p>
+              <p className="font-sans text-xl font-light text-center">Key Advantages</p>
               <div className="font-sans text-xl py-2">
                 <ul className="list-disc pl-5 space-y-2">
                   <li>2-day intensive learning experience</li>
@@ -323,7 +323,7 @@ class Pack extends React.Component {
                   <li>See designs built to perfection</li>
                 </ul>
               </div>
-              <p className="font-sans text-xl font-light">
+              <p className="font-sans text-xl font-light text-center">
                 Limited time opportunity - Delivered with excellence
               </p>
               <button className="flex items-center w-[95%] h-12 mt-6 bg-black text-white rounded-xl justify-between border-2 border-black hover:bg-white hover:text-black">
@@ -390,7 +390,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl decoration-dashed font-sans font-light">
+                <span className="text-lg md:text-xl decoration-dashed font-sans font-light text-center">
                   Find the best front-end champs on campus
                 </span>
               </div>
@@ -426,7 +426,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl decoration-dashed font-sans font-light">
+                <span className="text-lg md:text-xl decoration-dashed font-sans font-light text-center">
                   Team up and code together
                 </span>
               </div>
@@ -462,7 +462,7 @@ class Pack extends React.Component {
                     </g>
                   </svg>
                 </div>
-                <span className="text-lg md:text-xl font-sans font-light leading-tight">
+                <span className="text-lg md:text-xl font-sans font-light leading-tight text-center">
                   Make yourself usable with this 48-hour hackathon
                 </span>
               </div>

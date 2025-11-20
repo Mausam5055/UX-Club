@@ -24,7 +24,7 @@ export default class Benefit extends Component {
               </h2>
               <div className="w-16 h-1 bg-[#bbecff]"></div>
               <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
-                <p className="font-sans text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
+                <p className="font-sans text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl text-center">
                   The core philosophy driving this hackathon is straightforward yet impactful: <span className="font-semibold text-gray-900">great products originate from great design</span>. The first day centres on a flexible online round, focused on problem-solving and wireframing. The top 30 teams, distinguished by their user-centric design approach, will advance to the second day, where they will realise their validated concepts through an intensive coding session. This structure mirrors industry practices and instils the valuable lesson of prioritising design before development.
                 </p>
               </div>
@@ -147,23 +147,23 @@ export default class Benefit extends Component {
                 <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
                   <div className="font-sans text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
                     <div className="pb-3 border-b border-gray-200">
-                      <p className="font-semibold text-gray-900 mb-1">1:00 PM - 1:30 PM</p>
-                      <p>Mandatory check-in for all shortlisted teams.</p>
+                      <p className="font-semibold text-gray-900 mb-1 text-center">1:00 PM - 1:30 PM</p>
+                      <p className="text-center">Mandatory check-in for all shortlisted teams.</p>
                     </div>
                     
                     <div className="pb-3 border-b border-gray-200">
-                      <p className="font-semibold text-gray-900 mb-1">1:30 PM - 2:00 PM</p>
-                      <p>Inaugural Ceremony with welcome address and briefing on event flow and rules.</p>
+                      <p className="font-semibold text-gray-900 mb-1 text-center">1:30 PM - 2:00 PM</p>
+                      <p className="text-center">Inaugural Ceremony with welcome address and briefing on event flow and rules.</p>
                     </div>
                     
                     <div className="pb-3 border-b border-gray-200">
-                      <p className="font-semibold text-gray-900 mb-1">2:00 PM - 3:20 PM</p>
-                      <p>Teams evaluated based on their developed models with guidance from Senior Club Members.</p>
+                      <p className="font-semibold text-gray-900 mb-1 text-center">2:00 PM - 3:20 PM</p>
+                      <p className="text-center">Teams evaluated based on their developed models with guidance from Senior Club Members.</p>
                     </div>
                     
                     <div>
-                      <p className="font-semibold text-gray-900 mb-1">3:20 PM - 4:20 PM</p>
-                      <p>Final demo, judging, prize distribution, and vote of thanks.</p>
+                      <p className="font-semibold text-gray-900 mb-1 text-center">3:20 PM - 4:20 PM</p>
+                      <p className="text-center">Final demo, judging, prize distribution, and vote of thanks.</p>
                     </div>
                   </div>
                 </div>

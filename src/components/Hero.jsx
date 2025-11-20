@@ -5,7 +5,7 @@ const Hero = () => {
     <div>
       <div className="w-full mb-4 grid grid-cols-1 md:grid-cols-2 md:h-[80vh] place-items-center linear-grid">
         <div className="pt-10 md:pt-24">
-          <h1 className="mt-8 px-6 text-[5vh] md:text-[8vh] md:mt-0 font-serif leading-tight">
+          <h1 className="mt-8 px-6 text-[5vh] md:text-[8vh] md:mt-0 font-serif leading-tight text-center">
             Make yourself usable with 48hrs hackathon
             <span>
               
@@ -16,7 +16,7 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <h4 className="px-6 mt-6 text-xl leading-relaxed text-justify">
+          <h4 className="px-6 mt-6 text-xl leading-relaxed text-center">
             We{`'`}re hosting a 2-day sprint to find the best front-end champs on campus. Bring up the designs (must be beautiful) and the food (it{`'`}s free). You just show up, team up, and code. This is for the coders who want to flex their CSS skills and the designers who want to see their vision built right.
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2">
