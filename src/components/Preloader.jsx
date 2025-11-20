@@ -26,15 +26,19 @@ const Preloader = ({ onFinish }) => {
 
   return (
     <motion.div
-      className="fixed h-[100dvh] w-full bg-[#eceae5] top-0 left-0 text-[#0e0e0e] z-50 flex flex-col items-center justify-center font-[Neue]"
+      className="fixed h-[100dvh] w-full bg-[#eceae5] top-0 left-0 text-[#0e0e0e] z-[100] flex flex-col items-center justify-center font-[Neue]"
       initial={{ y: 0 }}
       exit={{ y: "-100%" }}
-      transition={{ duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
+      transition={{ 
+        duration: 2, 
+        ease: [0.76, 0, 0.24, 1],
+        delay: 0.5
+      }}
     >
       <motion.h1
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.1, delay: 0.2 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
         className="mb-8 font-[Socilo]"
       >
         <div className="flex items-center gap-2">
@@ -42,7 +46,7 @@ const Preloader = ({ onFinish }) => {
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "15vh" }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.8, duration: 1.2 }}
             className="h-[15vh] bg-[#0e0e0e]"
           ></motion.div>
           <h1 className="text-5xl">X</h1>
@@ -51,7 +55,7 @@ const Preloader = ({ onFinish }) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.2 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
         className="bottom-2 absolute w-full"
       >
         <div className="flex items-center justify-between w-full px-5 font-bold">

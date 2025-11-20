@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 import Preloader from './components/Preloader';
+
+// Import all components
 import Header from './components/Header';
 import Hero from './components/Hero';
 // import Insight from './components/Insight';
