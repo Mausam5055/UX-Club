@@ -87,20 +87,20 @@ export default class Benefit extends Component {
                 
                 <div className="border-2 border-black p-4 md:p-5 rounded-lg bg-white shadow-sm">
                   <div className="font-sans text-base md:text-lg text-gray-700 space-y-2">
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                      <span className="font-semibold text-gray-900 min-w-[140px]">Mode:</span>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-gray-900 min-w-[100px]">Mode:</span>
                       <span>Online</span>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                      <span className="font-semibold text-gray-900 min-w-[140px]">Start Time:</span>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-gray-900 min-w-[100px]">Start Time:</span>
                       <span>Problem statement disseminated via email at 9:00 AM on 22/11/2025</span>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                      <span className="font-semibold text-gray-900 min-w-[140px]">Activity:</span>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-gray-900 min-w-[100px]">Activity:</span>
                       <span>Teams work remotely to brainstorm, develop user flows, and create wireframes</span>
                     </div>
-                    <div className="flex flex-col sm:flex-row sm:items-start gap-2">
-                      <span className="font-semibold text-gray-900 min-w-[140px]">Deadline:</span>
+                    <div className="flex items-start gap-2">
+                      <span className="font-bold text-gray-900 min-w-[100px]">Deadline:</span>
                       <span>Submit wireframes (PDF/JPG/Figma link) via Google Form by 11:59 PM – 23/11/2025</span>
                     </div>
                   </div>
