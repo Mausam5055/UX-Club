@@ -74,7 +74,7 @@ export default class Included extends Component {
       { id: 1, name: 'Dr. T Venkateswara Rao', role: 'Faculty Co-ordinator', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763376310/D56_0101_-_Copy_sbe7g9.png', linkedinUrl: 'https://www.linkedin.com/in/dr-t-venkateswara-rao/' },
       { id: 2, name: 'Tanishk Kapoor', role: 'President', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763376310/D56_0101_-_Copy_sbe7g9.png', linkedinUrl: 'https://www.linkedin.com/in/tanishk-kapoor-64722828a/' },
       { id: 3, name: 'Sujal Singh', role: 'Vice President', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763482021/Untitled_design__1_-removebg-preview_nhpkbh.png', linkedinUrl: 'https://www.linkedin.com/in/sujalsingh28/' },
-      { id: 4, name: 'Sonakshi Saxena', role: 'General secretary', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763376454/IMG-20251117-WA0020_q9ewge.png', linkedinUrl: 'https://www.linkedin.com/in/sona14saxena' },
+      { id: 4, name: 'Sonakshi Saxena', role: 'General Secretary', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763376454/IMG-20251117-WA0020_q9ewge.png', linkedinUrl: 'https://www.linkedin.com/in/sona14saxena' },
       { id: 5, name: 'Yeshu Agarwal', role: 'Tech Lead', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763375023/img_yeshu_v41boo.png', linkedinUrl: 'https://www.linkedin.com/in/yeshu-agarwal-linkdedin' },
       { id: 6, name: 'Nitin Vishwakarma', role: 'Design Lead', imageUrl: 'https://res.cloudinary.com/dy5utqlkm/image/upload/v1763377075/Untitled_design-removebg-preview_lpfvlu.png', linkedinUrl: 'https://www.linkedin.com/in/nitin-vishwakarma/' },
     ];
@@ -141,22 +141,26 @@ export default class Included extends Component {
                         </div>
                         <div className="flex items-center mt-2 flex-col">
                           <div className="flex items-center">
-                            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                            </svg>
+                            {/* Replaced profile icon with LinkedIn icon and made it clickable */}
+                            {member.linkedinUrl ? (
+                              <a 
+                                href={member.linkedinUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="w-5 h-5 mr-2 text-blue-600 hover:text-blue-800"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                              </a>
+                            ) : (
+                              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                              </svg>
+                            )}
                             <p className="text-lg font-serif">{member.name}</p>
                           </div>
                           <p className="text-sm text-gray-600">{member.role}</p>
-                          {member.linkedinUrl && (
-                            <a 
-                              href={member.linkedinUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-blue-600 text-sm mt-1 hover:underline"
-                            >
-                              LinkedIn Profile
-                            </a>
-                          )}
                         </div>
                       </div>
                     </div>
@@ -199,9 +203,23 @@ export default class Included extends Component {
                   </div>
                   <div className="flex items-center mt-2 flex-col">
                     <div className="flex items-center">
-                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
-                      </svg>
+                      {/* Replaced profile icon with LinkedIn icon and made it clickable */}
+                      {member.linkedinUrl ? (
+                        <a 
+                          href={member.linkedinUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="w-5 h-5 mr-2 text-blue-600 hover:text-blue-800"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                          </svg>
+                        </a>
+                      ) : (
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
+                        </svg>
+                      )}
                       <p className="text-lg font-serif">{member.name}</p>
                     </div>
                     <p className="text-sm text-gray-600">{member.role}</p>
@@ -212,7 +230,6 @@ export default class Included extends Component {
                         rel="noopener noreferrer"
                         className="text-blue-600 text-sm mt-1 hover:underline"
                       >
-                        LinkedIn Profile
                       </a>
                     )}
                   </div>
