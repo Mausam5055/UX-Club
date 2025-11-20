@@ -7,42 +7,23 @@ export default class Footer extends Component {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight text-center">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-white leading-tight text-center md:text-left">
               Join the Design2Code Hackathon
             </h1>
             
-            <div className="flex flex-col items-center justify-center">
-              {/* Links - Centered */}
-              <div className="flex flex-col gap-3 text-base md:text-lg text-white text-center">
+            <div className="flex flex-col items-center md:items-end justify-center">
+              {/* Links - Centered on mobile, right-aligned on desktop */}
+              <div className="flex flex-col gap-3 text-base md:text-lg text-white text-center md:text-right">
               </div>
               
-              {/* Social Icons */}
-              <div className="flex gap-4 items-center mt-6">
+              {/* Social Icons - Centered on mobile, right-aligned on desktop */}
+              <div className="flex gap-4 items-center mt-6 justify-center md:justify-end">
                 <a 
                   href="https://www.linkedin.com/company/uxclub" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform cursor-pointer"
                   aria-label="LinkedIn"
-                >
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#fff"
-                    className="hover:fill-red-500 transition-colors"
-                  >
-                    <path d="M144,7339 L140,7339 L140,7332.001 C140,7330.081 139.153,7329.01 137.634,7329.01 C135.981,7329.01 135,7330.126 135,7332.001 L135,7339 L131,7339 L131,7326 L135,7326 L135,7327.462 C135,7327.462 136.255,7325.26 139.083,7325.26 C141.912,7325.26 144,7326.986 144,7330.558 L144,7339 L144,7339 Z M126.442,7323.921 C125.093,7323.921 124,7322.819 124,7321.46 C124,7320.102 125.093,7319 126.442,7319 C127.79,7319 128.883,7320.102 128.883,7321.46 C128.884,7322.819 127.79,7323.921 126.442,7323.921 L126.442,7323.921 Z M124,7339 L129,7339 L129,7326 L124,7326 L124,7339 Z" transform="translate(-124, -7319)" />
-                  </svg>
-                </a>
-                
-                <a 
-                  href="https://twitter.com/uxclub" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:scale-110 transition-transform cursor-pointer"
-                  aria-label="Twitter/X"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +33,7 @@ export default class Footer extends Component {
                     viewBox="0 0 16 16"
                     className="hover:fill-red-500 transition-colors"
                   >
-                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                   </svg>
                 </a>
                 
