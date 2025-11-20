@@ -22,10 +22,15 @@ export default class Benefit extends Component {
         <div className="bg-white w-[96%] lg:h-[100vh] border mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex flex-col justify-center lg:order-2 px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
             <div className="space-y-6">
-              <h2 className="font-serif font-medium text-3xl md:text-4xl lg:text-5xl leading-tight text-gray-900">
-                Prize Structure
-              </h2>
-              <div className="w-16 h-1 bg-[#bbecff]"></div>
+              <div className="flex items-center gap-2">
+                <div className="">
+                  <img className="object-cover h-8 w-8 md:h-14 md:w-14" src={star} alt="" />
+                </div>
+                <h2 className="font-mono font-medium text-3xl lg:text-4xl leading-none tracking-tight text-gray-900">
+                  Prize Structure
+                </h2>
+              </div>
+              <div className="w-16 h-[1px] bg-[#bbecff]"></div>
 
               <div className="relative bg-[#f7f3ef] w-[100%] border-black border-1 mx-auto shadow-md mb-6 px-6 md:px-26">
                 <div className="">
@@ -35,6 +40,12 @@ export default class Benefit extends Component {
                     src="https://peekinsights.co/wp-content/uploads/2024/09/icon-magnifying-glass.svg"
                   />
                 </div>
+                <h2 className="font-mono text-xl md:text-3xl capitalize text-center py-2 mt-8">
+                  Exciting Rewards
+                </h2>
+                <p className="font-mono text-sm md:text-lg tracking-tight leading-[1.2] pt-3 font-light mb-8 text-center">
+                  Exceptional prizes for outstanding teams, celebrating innovation and design excellence.
+                </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 mb-3">
                     <svg
@@ -52,7 +63,7 @@ export default class Benefit extends Component {
                     ₹4,000
                   </p>
                   <div className="flex items-center bg-white rounded-2xl gap-2 w-fit px-2 my-2">
-                    <span className="text-sm md:text-lg font-mono font-light py-2">
+                    <span className="text-sm md:text-xl capitalize font-mono font-light py-2">
                       Cash Gift Card
                     </span>
                   </div>
@@ -91,7 +102,7 @@ export default class Benefit extends Component {
                         </g>
                       </svg>
                     </div>
-                    <span className="text-sm md:text-xl font-mono font-light py-2">
+                    <span className="text-sm md:text-xl capitalize font-mono font-light py-2">
                       <span className="font-semibold">
                         Official Offline Certificates
                       </span>{" "}
@@ -131,7 +142,7 @@ export default class Benefit extends Component {
                         </g>
                       </svg>
                     </div>
-                    <span className="text-sm md:text-xl font-mono font-light py-2">
+                    <span className="text-sm md:text-xl capitalize font-mono font-light py-2">
                       <span className="font-semibold">
                         Digital Participation Certificates
                       </span>{" "}
