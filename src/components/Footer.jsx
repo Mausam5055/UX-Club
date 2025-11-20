@@ -85,7 +85,7 @@ export default class Footer extends Component {
           <div className="w-full h-[1px] bg-gray-700 my-6 md:my-8" />
 
           {/* Bottom Section with Logo */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div className="grid grid-cols-1 gap-6 items-center">
             {/* SVG Logo - Centered */}
             <div className="flex justify-center">
               <svg viewBox="0 0 600 120" className="w-full max-w-md h-auto">
@@ -96,7 +96,7 @@ export default class Footer extends Component {
             </div>
 
             {/* Copyright Info */}
-            <div className="flex flex-col md:flex-row md:justify-end gap-2 md:gap-8 text-sm md:text-base text-center md:text-right">
+            <div className="flex flex-col gap-2 text-sm text-center">
               <div className="text-white text-center">
                 Organized by UX Club
               </div>
