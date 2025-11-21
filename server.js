@@ -35,34 +35,49 @@ mongoose.connect(process.env.MONGO_URI || '')
   });
 
 // CORS Configuration - Allow production frontend
+// Normalize origins by removing trailing slashes and converting to lowercase
+const normalizeOrigin = (origin) => {
+  if (!origin) return origin;
+  return origin.trim().replace(/\/+$/, '').toLowerCase();
+};
+
 const allowedOrigins = process.env.CLIENT_ORIGIN 
-  ? process.env.CLIENT_ORIGIN.split(',').map(origin => origin.trim())
-  : ['http://localhost:5173', 'https://uxclub.vercel.app'];
+  ? process.env.CLIENT_ORIGIN.split(',').map(origin => normalizeOrigin(origin)).filter(Boolean)
+  : ['http://localhost:5173', 'https://uxclub.vercel.app'].map(normalizeOrigin);
 
-console.log('Allowed CORS origins:', allowedOrigins);
+console.log('=== CORS Configuration ===');
+console.log('Allowed origins (normalized):', JSON.stringify(allowedOrigins, null, 2));
+console.log('CLIENT_ORIGIN env var:', process.env.CLIENT_ORIGIN || 'not set (using defaults)');
+console.log('========================');
 
-// Enhanced CORS configuration
+// CORS middleware - must be applied before routes
 app.use(
   cors({
-    origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps, Postman, curl, etc.)
+    origin: function (origin, callback) {
+      // Allow requests with no origin (mobile apps, Postman, curl, etc.)
       if (!origin) {
+        console.log('Request with no origin - allowing');
         return callback(null, true);
       }
       
-      const isAllowed = allowedOrigins.includes(origin);
-      if (isAllowed) {
+      // Normalize the incoming origin (remove trailing slash, lowercase)
+      const normalizedOrigin = normalizeOrigin(origin);
+      
+      // Check if normalized origin is in allowed list
+      if (allowedOrigins.includes(normalizedOrigin)) {
+        console.log(`✓ CORS allowing origin: ${origin} (normalized: ${normalizedOrigin})`);
         callback(null, true);
       } else {
-        console.warn(`CORS blocked origin: ${origin}`);
+        console.error(`✗ CORS blocked origin: ${origin} (normalized: ${normalizedOrigin})`);
+        console.error(`  Allowed origins (normalized): ${allowedOrigins.join(', ')}`);
         callback(null, false);
       }
     },
-    methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'DELETE'],
+    methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     exposedHeaders: ['Content-Type'],
     credentials: true,
-    optionsSuccessStatus: 200, // Some legacy browsers (IE11) choke on 204
+    optionsSuccessStatus: 200,
   }),
 );
 
