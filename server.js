@@ -1,23 +1,20 @@
 /* eslint-env node */
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 
-// Load environment variables
-dotenv.config();
-
 const app = express();
 const PORT = process.env.PORT || 4000;
 const ALLOWED_EMAIL = /@vitbhopal\.ac\.in$/i;
-const MAX_TEAM_SIZE = 3;
+const MAX_TEAM_SIZE = 4;
 
 // MongoDB Schema
 const registrationSchema = new mongoose.Schema({
   leadName: { type: String, required: true, trim: true },
   leadEmail: { type: String, required: true, trim: true },
   leadPhone: { type: String, required: true, trim: true },
-  teamSize: { type: Number, required: true, min: 1, max: 3 },
+  teamSize: { type: Number, required: true, min: 1, max: 4 },
   members: [{
     name: { type: String, required: true, trim: true },
     email: { type: String, required: true, trim: true },
@@ -28,28 +25,12 @@ const registrationSchema = new mongoose.Schema({
 const Registration = mongoose.model('Registration', registrationSchema);
 
 // Connect to MongoDB
-const mongoUri = process.env.MONGO_URI?.trim();
-
-if (!mongoUri) {
-  console.error('MONGO_URI is not defined in environment variables');
-  console.error('Available env vars:', Object.keys(process.env).filter(k => k.includes('MONGO')));
-  process.exit(1);
-}
-
-// Verify the connection string format
-if (!mongoUri.startsWith('mongodb://') && !mongoUri.startsWith('mongodb+srv://')) {
-  console.error('Invalid MONGO_URI format. Must start with mongodb:// or mongodb+srv://');
-  console.error('Received:', mongoUri.substring(0, 20) + '...');
-  process.exit(1);
-}
-
-console.log('Attempting to connect to MongoDB...');
-mongoose.connect(mongoUri)
+mongoose.connect(process.env.MONGO_URI || '')
   .then(() => {
-    console.log('Connected to MongoDB successfully');
+    console.log('Connected to MongoDB');
   })
   .catch((error) => {
-    console.error('MongoDB connection error:', error.message);
+    console.error('MongoDB connection error:', error);
     process.exit(1);
   });
 
@@ -62,7 +43,7 @@ const normalizeOrigin = (origin) => {
 
 const allowedOrigins = process.env.CLIENT_ORIGIN 
   ? process.env.CLIENT_ORIGIN.split(',').map(origin => normalizeOrigin(origin)).filter(Boolean)
-  : ['http://localhost:5173', 'https://ux-club.vercel.app'].map(normalizeOrigin);
+  : ['http://localhost:5173', 'https://uxclub.vercel.app'].map(normalizeOrigin);
 
 console.log('=== CORS Configuration ===');
 console.log('Allowed origins (normalized):', JSON.stringify(allowedOrigins, null, 2));
@@ -120,7 +101,7 @@ const validateTeam = (payload) => {
 
   const size = Number(teamSize);
   if (!Number.isInteger(size) || size < 1 || size > MAX_TEAM_SIZE) {
-    errors.push('Team size must be between 1 and 3.');
+    errors.push(`Team size must be between 1 and ${MAX_TEAM_SIZE}.`);
   }
 
   const expectedMembers = Math.max(0, size - 1);
