@@ -6,11 +6,23 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuAnimating, setIsMenuAnimating] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      // Opening menu
+      setIsMenuOpen(true);
+      setIsMenuAnimating(true);
+    } else {
+      // Closing menu - keep animating state until animation completes
+      setIsMenuOpen(false);
+      // Delay removing the animating state by the exit animation duration (1000ms)
+      setTimeout(() => {
+        setIsMenuAnimating(false);
+      }, 1000);
+    }
   };
 
   useEffect(() => {
@@ -35,6 +47,9 @@ const Header = () => {
     // Close mobile menu if open
     if (isMenuOpen) {
       setIsMenuOpen(false);
+      setTimeout(() => {
+        setIsMenuAnimating(false);
+      }, 1000);
     }
 
     // If not on home page, navigate to home page first
@@ -97,7 +112,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full ${isMenuOpen ? 'bg-[#dcfebc]' : 'bg-white'} z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 left-0 w-full ${isMenuAnimating ? 'bg-[#dcfebc]' : 'bg-white'} z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
         <div className="w-full h-18 lg:h-20 border-b flex justify-between items-center ">
