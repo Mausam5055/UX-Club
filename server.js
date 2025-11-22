@@ -62,7 +62,7 @@ const normalizeOrigin = (origin) => {
 
 const allowedOrigins = process.env.CLIENT_ORIGIN 
   ? process.env.CLIENT_ORIGIN.split(',').map(origin => normalizeOrigin(origin)).filter(Boolean)
-  : ['http://localhost:5173', 'https://uxclub.vercel.app'].map(normalizeOrigin);
+  : ['http://localhost:5173', 'https://ux-club.vercel.app'].map(normalizeOrigin);
 
 console.log('=== CORS Configuration ===');
 console.log('Allowed origins (normalized):', JSON.stringify(allowedOrigins, null, 2));
