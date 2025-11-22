@@ -93,7 +93,7 @@ class Pack extends React.Component {
     ];
 
     return (
-      <div className="w-full py-10 h-full items-center grid bg-[#dcfebc]">
+      <div id="ourgoals" className="w-full py-10 h-full items-center grid bg-[#dcfebc]">
         <div className="grid grid-cols-1">
           <h2 className="font-serif font-light text-3xl md:text-5xl px-6 leading-10 text-center mb-4">
             Evaluation Committee

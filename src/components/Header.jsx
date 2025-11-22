@@ -37,8 +37,30 @@ const Header = () => {
         setIsMenuOpen(false);
       }
       
-      // Scroll to the section
-      section.scrollIntoView({ behavior: 'smooth' });
+      // Get header height for offset (mobile: 4.5rem, desktop: 5rem)
+      const headerHeight = window.innerWidth >= 1024 ? 80 : 72;
+      
+      // Calculate position with offset
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      // Use Lenis scrolling if available, otherwise use native scrolling
+      if (window.lenis) {
+        // For Lenis, we need to scroll to the element directly
+        window.lenis.scrollTo(section, {
+          offset: -headerHeight
+        });
+      } else {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // If section not found, close menu anyway
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
     }
   };
 
@@ -85,29 +107,23 @@ const Header = () => {
             </svg>
           </Link>
           <div className="flex items-center gap-8 mr-4 text-xl font-mono">
-            <a
+            <div
               className="hidden font-normal text-lg lg:block relative overflow-hidden group cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('testimonials');
-              }}
+              onClick={() => scrollToSection('testimonials')}
             >
               <span className="relative inline-block after:block after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
                 Event Details
               </span>
-            </a>
+            </div>
 
-            <a
+            <div
               className="hidden font-normal text-lg lg:block relative overflow-hidden group cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('ourgoals');
-              }}
+              onClick={() => scrollToSection('ourgoals')}
             >
               <span className="relative inline-block after:block after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 group-hover:after:w-full">
                 Evaluation Committee
               </span>
-            </a>
+            </div>
             <Link 
               to="/register"
               className="hidden py-2 px-4 rounded-lg font-normal text-lg md:inline-block relative overflow-hidden group bg-black text-white hover:bg-white hover:text-black"

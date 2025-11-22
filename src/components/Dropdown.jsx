@@ -45,10 +45,28 @@ export default function Nav({ isOpen, toggleMenu }) {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      // Close the menu after navigation
-      toggleMenu();
+      // Get header height for offset (mobile: 4.5rem, desktop: 5rem)
+      const headerHeight = window.innerWidth >= 1024 ? 80 : 72;
+      
+      // Calculate position with offset
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      // Use Lenis scrolling if available, otherwise use native scrolling
+      if (window.lenis) {
+        // For Lenis, we need to scroll to the element directly
+        window.lenis.scrollTo(section, {
+          offset: -headerHeight
+        });
+      } else {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
+    // Close the menu after navigation
+    toggleMenu();
   };
 
   return (
