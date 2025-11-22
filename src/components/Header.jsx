@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./Dropdown";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,14 +32,42 @@ const Header = () => {
 
   // Function to handle smooth scrolling to sections
   const scrollToSection = (sectionId) => {
+    // Close mobile menu if open
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+
+    // If not on home page, navigate to home page first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation and then scroll
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const headerHeight = window.innerWidth >= 1024 ? 80 : 72;
+          if (window.lenis) {
+            window.lenis.scrollTo(section, {
+              offset: -headerHeight,
+              immediate: true,
+              duration: 0,
+              force: true
+            });
+          } else {
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'instant'
+            });
+          }
+        }
+      }, 100);
+      return;
+    }
+
+    // Already on home page, just scroll
     const section = document.getElementById(sectionId);
-
     if (section) {
-      // Close mobile menu if open
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-
       // Get header height for offset (mobile: 4.5rem, desktop: 5rem)
       const headerHeight = window.innerWidth >= 1024 ? 80 : 72;
 
@@ -60,11 +90,6 @@ const Header = () => {
           top: offsetPosition,
           behavior: 'instant'
         });
-      }
-    } else {
-      // If section not found, close menu anyway
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
       }
     }
   };
