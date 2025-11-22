@@ -97,7 +97,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full bg-[#dcfebc] lg:bg-white z-50 transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
+        className={`fixed top-0 left-0 w-full ${isMenuOpen ? 'bg-[#dcfebc]' : 'bg-white'} z-50 transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
           }`}
       >
         <div className="w-full h-18 lg:h-20 border-b flex justify-between items-center ">
