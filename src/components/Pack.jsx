@@ -119,9 +119,9 @@ class Pack extends React.Component {
               <div className="px-3 py-3 flex flex-col items-center">
                 <div className="w-full aspect-[4/5] bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden mb-3">
                   {member.imageUrl ? (
-                    <img 
-                      src={member.imageUrl} 
-                      alt={member.name} 
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -129,9 +129,9 @@ class Pack extends React.Component {
                   )}
                 </div>
                 {member.linkedinUrl && (
-                  <a 
-                    href={member.linkedinUrl} 
-                    target="_blank" 
+                  <a
+                    href={member.linkedinUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center w-full h-10 mb-2 bg-black text-white rounded-lg justify-between border-2 border-black hover:bg-white hover:text-black text-xs"
                   >
@@ -181,9 +181,9 @@ class Pack extends React.Component {
               <div className="px-6 pt-6 flex flex-col items-center">
                 <div className="w-64 h-80 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden mb-6">
                   {member.imageUrl ? (
-                    <img 
-                      src={member.imageUrl} 
-                      alt={member.name} 
+                    <img
+                      src={member.imageUrl}
+                      alt={member.name}
                       className="w-full h-full object-cover"
                     />
                   ) : (
@@ -191,9 +191,9 @@ class Pack extends React.Component {
                   )}
                 </div>
                 {member.linkedinUrl && (
-                  <a 
-                    href={member.linkedinUrl} 
-                    target="_blank" 
+                  <a
+                    href={member.linkedinUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center w-[95%] h-12 mb-6 mt-4 bg-black text-white rounded-xl justify-between border-2 border-black hover:bg-white hover:text-black"
                   >

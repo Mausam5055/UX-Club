@@ -31,29 +31,34 @@ const Header = () => {
   // Function to handle smooth scrolling to sections
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+
     if (section) {
       // Close mobile menu if open
       if (isMenuOpen) {
         setIsMenuOpen(false);
       }
-      
+
       // Get header height for offset (mobile: 4.5rem, desktop: 5rem)
       const headerHeight = window.innerWidth >= 1024 ? 80 : 72;
-      
+
       // Calculate position with offset
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-      
+
       // Use Lenis scrolling if available, otherwise use native scrolling
       if (window.lenis) {
         // For Lenis, we need to scroll to the element directly
+        // Adding duration: 0 and force: true to ensure immediate jump
         window.lenis.scrollTo(section, {
-          offset: -headerHeight
+          offset: -headerHeight,
+          immediate: true,
+          duration: 0,
+          force: true
         });
       } else {
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: 'instant'
         });
       }
     } else {
@@ -67,9 +72,8 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full bg-[#dcfebc] lg:bg-white z-50 transition-transform duration-300 ${
-          showHeader ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 w-full bg-[#dcfebc] lg:bg-white z-50 transition-transform duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="w-full h-18 lg:h-20 border-b flex justify-between items-center ">
           <Link to="/">
@@ -124,7 +128,7 @@ const Header = () => {
                 Evaluation Committee
               </span>
             </div>
-            <Link 
+            <Link
               to="/register"
               className="hidden py-2 px-4 rounded-lg font-normal text-lg md:inline-block relative overflow-hidden group bg-black text-white hover:bg-white hover:text-black"
             >
@@ -132,7 +136,7 @@ const Header = () => {
                 Register Now!
               </span>
             </Link>
-            <div 
+            <div
               className="h-10 w-10 cursor-pointer lg:hidden text-black lg:text-black"
               onClick={toggleMenu}
             >
